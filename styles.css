@@ -7,3 +7,42 @@
     color: hsl(228, 45%, 44%); 
 }
 
+html {
+    background-color: #131518;
+    color: hsl(217, 12%, 63%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    width: 327px;
+    height: 360px;
+    border-radius: 15px;
+    background-image: radial-gradient(#232A34 100%, #181E27 100%);
+}
+
+@media only screen and (min-width: 950px) {
+    .card-container {
+        width: 412px;
+        height: 416px;
+        border-radius: 30px;
+    }
+  }
+
+
+footer {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    bottom: 10px;
+}
+
+
+

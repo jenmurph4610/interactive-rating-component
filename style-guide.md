@@ -11,15 +11,15 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Orange: hsl(25, 97%, 53%)
+- Orange: hsl(25, 97%, 53%)  - selected rating font color
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Light Grey: hsl(217, 12%, 63%)
-- Medium Grey: hsl(216, 12%, 54%)
-- Dark Blue: hsl(213, 19%, 18%)
-- Very Dark Blue: hsl(216, 12%, 8%)
+- White: hsl(0, 0%, 100%) - heading fotn color
+- Light Grey: hsl(217, 12%, 63%) - paragraph font color
+- Medium Grey: hsl(216, 12%, 54%) - number button font color
+- Dark Blue: hsl(213, 19%, 18%) - button backgroung color
+- Very Dark Blue: hsl(216, 12%, 8%) - page background color
 
 ## Typography
 
