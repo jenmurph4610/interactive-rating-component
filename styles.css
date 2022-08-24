@@ -12,6 +12,7 @@ html {
     color: hsl(217, 12%, 63%);
     font-family: 'Overpass', sans-serif;
     font-weight: 400;
+    font-size: 14px;
 }
 
 body {
@@ -21,7 +22,20 @@ body {
     justify-content: center;
 }
 
-.card-container {
+h1 {
+    font-weight: 700;
+    line-height: 30.38px;
+    font-size: 24px;
+    color: white;
+    margin-top: 16px;
+}
+
+p {
+    line-height: 22px;
+    margin-top: 10px;
+}
+
+#card-container {
     width: 327px;
     height: 360px;
     border-radius: 15px;
@@ -29,7 +43,7 @@ body {
 }
 
 @media only screen and (min-width: 950px) {
-    .card-container {
+    #card-container {
         width: 412px;
         height: 416px;
         border-radius: 30px;
@@ -45,4 +59,102 @@ footer {
 }
 
 
+#rating-card input {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
 
+#rating-card label {
+    display: inline-flex;
+    background-color: #262E38;
+    height: 42px;
+    width: 42px;
+    border-radius: 50px;
+    color :#7C8798;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#rating-card label:hover {
+    background-color: #FC7614;
+    color: white;
+}
+#rating-card input:checked + label {
+    background-color: purple;
+    color: white;
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+}
+
+form button {
+    border-radius: 50px;
+    width: 100%;
+    background-color: #FC7614;
+    color: white;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 24px;
+    line-height: 17.72px;
+    font-weight: 700;
+}
+form button:hover {
+    background-color: white;
+    color:#FC7614;
+}
+
+#rating-card {
+    padding: 24px 24px 32px 24px;
+}
+
+#rating-icon {
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: #262E38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 950px) {
+
+    h1 {
+        line-height: 35.45px;
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 7px;
+    }
+    #rating-card {
+        padding: 39px 39px 32px 39px;
+    }
+    #rating-icon {
+        width: 48px;
+        height: 48px;
+    }
+    #rating-card label {
+        height: 51px;
+        width: 51px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    form button {
+
+        padding-top: 11px;
+        padding-bottom: 11px;
+        margin-top: 43px;
+        line-height: 19px;
+        font-size: 15px;
+    }
+  }
