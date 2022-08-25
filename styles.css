@@ -1,3 +1,5 @@
+
+
 html {
     background-color: #131518;
     color: hsl(217, 12%, 63%);
@@ -22,6 +24,7 @@ body {
 }
 
 #rating-card {
+    display: none; /*remove after testing*/
     padding: 24px 24px 32px 24px;
 }
 
@@ -33,6 +36,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 16px;
 }
 
 h1 {
@@ -40,12 +44,11 @@ h1 {
     line-height: 30.38px;
     font-size: 24px;
     color: white;
-    margin-top: 16px;
+    margin-bottom: 10px;
 }
 
 p {
     line-height: 22px;
-    margin-top: 10px;
 }
 
 form {
@@ -55,7 +58,6 @@ form {
 .rating-buttons {
     display: flex;
     justify-content: space-evenly;
-   /* margin-top: 24px;*/
 }
 
 input {
@@ -106,16 +108,23 @@ form button:hover {
 
 /*Styling and size adustments for desktop size*/
 @media only screen and (min-width: 950px) {
-
+    #rating-icon {
+        border-radius: 50px;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
     h1 {
         line-height: 35.45px;
         font-size: 28px;
-        margin-top: 30px;
+        margin-bottom: 7px;
     }
     p {
         font-size: 15px;
         line-height: 24px;
-        margin-top: 7px;
     }
 
     #card-container {
@@ -125,7 +134,7 @@ form button:hover {
     }
 
     #rating-card {
-        padding: 39px 39px 32px 39px;
+        padding: 32px 36px 32px 36px;
     }
     #rating-icon {
         width: 48px;
@@ -140,11 +149,60 @@ form button:hover {
     form button {
         padding-top: 11px;
         padding-bottom: 11px;
-        margin-top: 43px;
+        margin-top: 32px;
         line-height: 19px;
         font-size: 15px;
     }
   }
+
+/*Thank you card section*/
+#thank-you-card {
+    padding: 34px 24px 37px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#thank-you-card img {
+    width: 144px;
+    height: auto;
+}
+
+h2 {
+    color: #FC7614;
+    line-height: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #262E38;
+    border-radius: 22.5px;
+    padding: 8px 12px 5px 12px;
+    margin: 24px auto 24px auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+@media only screen and (min-width: 950px) {
+    #thank-you-card {
+        padding: 45px 36px 45px 36px;
+    }
+
+    #thank-you-card img {
+        width: 162px;
+    }
+
+    h2 {
+        line-height: 24px;
+        font-size: 15px;
+        padding: 7px auto 4px auto;
+        margin: 32px 78px;
+    }
+    h1 {
+        margin-bottom: 7px;
+    }
+
+}
 
 /*Footer Section*/
 footer {
