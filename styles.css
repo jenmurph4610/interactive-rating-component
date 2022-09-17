@@ -24,7 +24,6 @@ body {
 }
 
 #rating-card {
-    display: none; /*remove after testing*/
     padding: 24px 24px 32px 24px;
 }
 
@@ -158,7 +157,7 @@ form button:hover {
 /*Thank you card section*/
 #thank-you-card {
     padding: 34px 24px 37px 24px;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
