@@ -16,18 +16,18 @@ body {
 }
 
 
-#card-container {
+#cardContainer {
     width: 327px;
     height: 360px;
     border-radius: 15px;
     background-image: radial-gradient(#232A34 100%, #181E27 100%);
 }
 
-#rating-card {
+#ratingCard {
     padding: 24px 24px 32px 24px;
 }
 
-#rating-icon {
+#ratingIcon {
     border-radius: 50px;
     width: 40px;
     height: 40px;
@@ -54,7 +54,7 @@ form {
     margin-top: 24px;
 }
 
-.rating-buttons {
+.ratingButtons {
     display: flex;
     justify-content: space-evenly;
 }
@@ -107,7 +107,7 @@ form button:hover {
 
 /*Styling and size adustments for desktop size*/
 @media only screen and (min-width: 950px) {
-    #rating-icon {
+    #ratingIcon {
         border-radius: 50px;
         width: 48px;
         height: 48px;
@@ -126,20 +126,20 @@ form button:hover {
         line-height: 24px;
     }
 
-    #card-container {
+    #cardContainer {
         width: 412px;
         height: 416px;
         border-radius: 30px;
     }
 
-    #rating-card {
+    #ratingCard {
         padding: 32px 36px 32px 36px;
     }
-    #rating-icon {
+    #ratingIcon {
         width: 48px;
         height: 48px;
     }
-    #rating-card label {
+    #ratingCard label {
         height: 51px;
         width: 51px;
         font-size: 16px;
@@ -155,7 +155,7 @@ form button:hover {
   }
 
 /*Thank you card section*/
-#thank-you-card {
+#thankYouCard {
     padding: 34px 24px 37px 24px;
     display: none;
     flex-direction: column;
@@ -163,7 +163,7 @@ form button:hover {
     text-align: center;
 }
 
-#thank-you-card img {
+#thankYouCard img {
     width: 144px;
     height: auto;
 }
@@ -183,11 +183,11 @@ h1 {
     margin-bottom: 10px;
 }
 @media only screen and (min-width: 950px) {
-    #thank-you-card {
+    #thankYouCard {
         padding: 45px 36px 45px 36px;
     }
 
-    #thank-you-card img {
+    #thankYouCard img {
         width: 162px;
     }
 

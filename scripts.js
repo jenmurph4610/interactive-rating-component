@@ -17,15 +17,15 @@ function getRadioValue() {
 }
 
 const ratingCard = (
-    <div id="rating-card">
-        <div id="rating-icon">
+    <div id="ratingCard">
+        <div id="ratingIcon">
           <img src="./images/icon-star.svg" alt="Rating star" />
         </div>
         <h1>How did we do?</h1>
         <p>Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
         <form>
-        <div class="rating-buttons">
+        <div class="ratingButtons">
             <input type='radio' name='ratings' class='rating-radio' id='rate-one' value='1'></input>
             <label for="rate-one" class="rating-label">1</label>
                 
@@ -47,13 +47,13 @@ const ratingCard = (
 );
 
 const thankYouCard = (
-    <div id="thank-you-card" >
+    <div id="thankYouCard" >
         <img src="./images/illustration-thank-you.svg" alt="Phone with reciept and credit card" />
-        <h2 id="rating-selected">You selected # out of 5</h2>
+        <h2 id="rating-selected">You selected {getRadioValue()} out of 5</h2>
         <h1>Thank you!</h1>
         <p>We appreciate you taking the time to give a rating. 
         If you ever need more support, don’t hesitate to get in touch!</p>
     </div>
 );
 
-ReactDOM.render(thankYouCard, document.getElementById('card-container'));
+ReactDOM.render(thankYouCard, document.getElementById('cardContainer'));
