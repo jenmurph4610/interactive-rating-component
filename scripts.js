@@ -56,4 +56,4 @@ const thankYouCard = (
     </div>
 );
 
-ReactDOM.render(ratingCard, document.getElementById('card-container'));
+ReactDOM.render(thankYouCard, document.getElementById('card-container'));
