@@ -1,35 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Interactive rating component</title>
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-</head>
+let button = document.getElementById('submitButton');
+let ratingDisplay = document.getElementById('rating-selected');
 
-<body>
 
-  <main>
+//Gets and returns the chosend rating
+function getRadioValue() {
+    var ratingsRadioGroup = document.getElementsByName('ratings');
 
-    <section id="cardContainer">
-      <div id="ratingCard">
+    for(i = 0; i < ratingsRadioGroup.length; i++) {
+        if (ratingsRadioGroup[i].checked) {
+            return ratingsRadioGroup[i].value;
+        }
+    }
+}
 
+const ratingCard = (
+    <div id="ratingCard">
         <div id="ratingIcon">
           <img src="./images/icon-star.svg" alt="Rating star" />
         </div>
-
         <h1>How did we do?</h1>
-
         <p>Please let us know how we did with your support request. All feedback is appreciated 
         to help us improve our offering!</p>
-
-        <form id="form">
+        <form>
         <div class="ratingButtons">
             <input type='radio' name='ratings' class='rating-radio' id='rate-one' value='1'></input>
             <label for="rate-one" class="rating-label">1</label>
@@ -48,28 +43,17 @@
           </div>
           <button id="submitButton" type="submit">SUBMIT</button>
         </form>
+    </div>
+);
 
-      </div>
-
-      <div id="thankYouCard" >
+const thankYouCard = (
+    <div id="thankYouCard" >
         <img src="./images/illustration-thank-you.svg" alt="Phone with reciept and credit card" />
-        <h2 id="rating-selected">You selected <span id="chosenRating"></span> out of 5</h2>
+        <h2 id="rating-selected">You selected {getRadioValue()} out of 5</h2>
         <h1>Thank you!</h1>
         <p>We appreciate you taking the time to give a rating. 
         If you ever need more support, don’t hesitate to get in touch!</p>
     </div>
+);
 
-    </section>
-
-  </main>
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">J. Murphy</a>.
-  </footer>
-
-</body>
-
-</html>
-
-<script type="module" src="scripts.js"></script>
+ReactDOM.render(thankYouCard, document.getElementById('cardContainer'));
