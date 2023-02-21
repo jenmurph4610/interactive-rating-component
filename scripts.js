@@ -7,6 +7,8 @@ const form = document.getElementById('form')
 
 const chosenRating = document.getElementById('chosenRating');
 
+let rating = null;
+
 form.addEventListener('submit', handleClick);
 
 function handleClick() {
@@ -14,8 +16,17 @@ function handleClick() {
 
     for(let i = 0; i < ele.length; i++) {
         if(ele[i].checked)
-        chosenRating.innerHTML = ele[i].value;
-        ratingCard.style.display = "none"; 
-        thankYouCard.style.display = "flex";
-    }    
+        rating = ele[i].value;
+    }
+
+    if (rating === null) {
+        document.getElementById('errorSection').innerHTML = "You forgot to select a rating first!"
+    }
+    
+    else {
+    chosenRating.innerHTML = rating;
+    ratingCard.style.display = "none"; 
+    thankYouCard.style.display = "flex";
+    }
+
 }
