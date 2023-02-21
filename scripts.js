@@ -20,9 +20,9 @@ function handleClick() {
     }
 
     if (rating === null) {
-        document.getElementById('errorSection').innerHTML = "You forgot to select a rating first!"
+        document.getElementById('errorSection').innerHTML = "Please select a rating first!"
     }
-    
+
     else {
     chosenRating.innerHTML = rating;
     ratingCard.style.display = "none"; 
